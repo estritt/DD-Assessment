@@ -1,0 +1,15 @@
+<div class="mx-auto mt-4 d-flex flex-column align-items-center">
+
+    <div class="d-flex p-2 gap-3 justify-content-center">
+      <textarea class="form-control" [(ngModel)]="userMessage" rows="3" placeholder="Type your query here..."></textarea>
+      <button class="btn btn-info m-auto" (click)="sendMessage()">Send</button>
+    </div>
+
+    @if (response) {
+      <div>
+        <h3>Response:</h3>
+        <p [innerHTML]="response"></p>
+      </div>
+    }
+
+</div>

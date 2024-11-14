@@ -1,0 +1,44 @@
+/* move individual component and tag styling to their respective css files later */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f7f5;
+}
+
+.content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+}
+
+table-component {
+    flex-grow: 1;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    text-align: center;
+    border-radius: 1rem;
+    border-color: black;
+}
+
+chat-component {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content h1 {
+    margin-top: 1.75rem;
+}
+
+.content p {
+    margin-top: 1.5rem;
+}

@@ -1,0 +1,28 @@
+
+<table class="table table-striped table-bordered table-hover" style="width:80%">
+    <thead>
+        <tr>
+            <th 
+                scope="col" 
+                *ngFor="let column of columnOrder"
+                sortable={{column}}
+                (sort)="onSort($event)"
+                class="asc"
+                >
+                <!-- @if (direction === asc) {<span></span>} -->
+                {{column}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- could make img# a col header with a bit more code -->
+        @for (imgObj of data; track imgObj.image_id) {
+            <tr> 
+                <!-- <th>{{imgObj.id}}</th> -->
+                <td *ngFor="let column of columnOrder">
+                    {{imgObj[column]}}
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
